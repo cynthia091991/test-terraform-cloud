@@ -7,3 +7,12 @@ variable "AWS_ACCESS_KEY_ID" {
     type    = string
     default = ""
 }
+
+variable "instance_type" {
+    default = "t3.micro" 
+  
+}
+
+variable "region" {
+  default = ["us-east-1"]
+}
