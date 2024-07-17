@@ -1,13 +1,13 @@
 variable "ImageId" {
     type = string
     description = "ami id"
-    default = "ami-0bcdb47863b39579f" 
+    default = "" 
 }
 
 variable "instance_type" {
     type = string
     description = "ec2 type"
-    default = "t3.micro"
+    default = ""
 }
 
 variable "instance_name" {
