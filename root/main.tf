@@ -10,9 +10,10 @@ module "vpc" {
 
 module "ec2" {
   source        = "../ec2"
-  instance_type = "t2.nano" 
+  instance_type = "t3.micro" 
   instance_name = "product-search-instance"
   subnet_id     = module.vpc.subnet1_id
+  ImageId       = "ami-0bcdb47863b39579f"   
 }
 
 module "s3" {

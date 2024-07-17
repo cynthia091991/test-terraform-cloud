@@ -7,7 +7,7 @@ variable "ImageId" {
 variable "instance_type" {
     type = string
     description = "ec2 type"
-    default = ""
+    default = "t3.micro"
 }
 
 variable "instance_name" {
