@@ -13,7 +13,7 @@ module "ec2" {
   instance_type = var.instance_type 
   instance_name = "product-search-instance"
   subnet_id     = module.vpc.subnet1_id
-  ImageId       = "ami-0bcdb47863b39579f" 
+  ImageId       = var.ImageId 
   region        = var.region
 }
 
