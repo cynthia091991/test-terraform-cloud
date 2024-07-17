@@ -1,13 +1,13 @@
 variable "ami" {
     type = string
     description = "ami id"
-    default = "ami-0df435f331839b2d6"
+    default = ""
 }
 
 variable "instance_type" {
     type = string
     description = "ec2 type"
-    default = "t2.micro"
+    default = ""
 }
 
 variable "instance_name" {
