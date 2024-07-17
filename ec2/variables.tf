@@ -1,7 +1,7 @@
-variable "ami" {
+variable "ImageId" {
     type = string
     description = "ami id"
-    default = ""
+    default = "ami-0bcdb47863b39579f"
 }
 
 variable "instance_type" {
