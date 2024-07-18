@@ -1,3 +1,3 @@
 output "bucket_name" {
-    value = aws_s3_bucket.images_bucket0919911.id
+    value = aws_s3_bucket.imagesjss_bucket765438.id
 }

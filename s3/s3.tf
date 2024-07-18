@@ -1,3 +1,3 @@
-resource "aws_s3_bucket" "images_bucket0919911" {
+resource "aws_s3_bucket" "imagesjss_bucket765438" {
   bucket = var.bucket_name
  } 
