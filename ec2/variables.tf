@@ -13,7 +13,7 @@ variable "instance_type" {
 variable "instance_name" {
     type = string
     description = "ec2 name"
-    default = "amazon-instance"
+    default = "terrraform-cloud-testing"
 }
 
 variable "subnet_id" {
