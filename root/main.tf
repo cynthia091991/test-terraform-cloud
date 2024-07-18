@@ -18,10 +18,10 @@ module "ec2" {
   vpc_id           = var.vpc_id
 }
 
-# module "s3" {
-#   source      = "../s3"
-#   bucket_name = "amazon-images-bucket-093235"
-# }
+module "s3" {
+  source      = "../s3"
+  bucket_name = "amazon-images-bucket-093235"
+}
 
 module "ec2_new" {
   source        = "../ec2"
