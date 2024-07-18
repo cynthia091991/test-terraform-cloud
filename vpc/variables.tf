@@ -7,7 +7,7 @@ variable "cidr_block" {
 variable "vpc_name" {
     type = string
     description = "vpc name"
-    default = "amazon-vpc"
+    default = "present-vpc"
 }
 
 variable "subnet1_cidr" {

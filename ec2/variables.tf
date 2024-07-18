@@ -33,3 +33,6 @@ variable "AWS_ACCESS_KEY_ID" {
     type    = string
     default = ""
 }
+variable "vpc_id" {
+  default = ""
+}

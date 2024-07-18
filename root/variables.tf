@@ -8,8 +8,12 @@ variable "AWS_ACCESS_KEY_ID" {
     default = ""
 }
 
+variable "vpc_id" {
+  default = "amazon-vpc"
+}
+
 variable "instance_type" {
-    default = "t3.micro" 
+    default = "t2.micro" 
   
 }
 
@@ -18,5 +22,5 @@ variable "region" {
 }
 
 variable "ImageId" {
-  default = "ami-0bcdb47863b39579f" 
+  default = "ami-0a1debd1f3f6d1514" 
 }
