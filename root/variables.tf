@@ -24,3 +24,8 @@ variable "region" {
 variable "ImageId" {
   default = "ami-0a1debd1f3f6d1514" 
 }
+variable "test_private_sub_0" {
+    type         = string 
+    description  = "subnet id to be launching the ec2"
+    default      = ""
+}
