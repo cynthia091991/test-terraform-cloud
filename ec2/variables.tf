@@ -16,9 +16,10 @@ variable "instance_name" {
     default = "terrraform-cloud-testing"
 }
 
-variable "subnet_id" {
-    type = string
-    description = "subnet id to be launching the ec2"
+variable "test_private_sub_0" {
+    type           = string
+    description    = "subnet id to be launching the ec2"
+    default        =  "" 
 }
 variable "region" {
   default = [""]
