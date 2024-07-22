@@ -20,7 +20,7 @@ module "ec2" {
 
 module "s3" {
   source      = "../s3"
-  bucket_name = "cynthia-images-039483"
+  bucket_name = "dreambig-images-039483" 
 }
 
 # module "ec2_new" {
