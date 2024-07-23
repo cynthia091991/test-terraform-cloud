@@ -10,12 +10,6 @@ variable "vpc_name" {
     default = "dreambig-test-vpc"
 }
 
-# variable "subnet1_cidr" {
-#     type = string
-#     description = "subnet1 cidr range"
-#     default = "10.0.1.0/24"
-# }
-
 variable "subnet1_name" {
     type = string
     description = "subnet name"
@@ -35,10 +29,29 @@ variable "test" {
     public_sub  = ["10.0.3.0/24", "10.0.4.0/24"]
   }
 }
-# # variable "MWName" {
-# #   type = map(list(string))
-# # )
-# ...
 
 
+
+
+locals {
+  security_groups = {
+    public-ec2-sg = {
+      name        = "public_sg"
+      description = "Security Group for Public Access"
+      ingress = {
+        ssh = {
+          from        = 22
+          to          = 22
+          protocol    = "tcp"
+          cidr_blocks = ["10.0.0.0/16"]           #[var.access_ip]
+        }
+        http = {
+          from        = 80
+          to          = 80
+          protocol    = "tcp"
+          cidr_blocks = ["0.0.0.0/0"]
+        }
+      }
+ }  }
+}
 

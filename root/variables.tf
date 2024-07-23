@@ -29,3 +29,10 @@ variable "test_private_sub_0" {
     description  = "subnet id to be launching the ec2"
     default      = ""
 }
+
+# variable "public-ec2-sg" {
+#     type = list(string)
+#     description = "sg to launch public ec2"
+#     default = ["public-ec2-sg"]
+
+# }
