@@ -16,6 +16,7 @@ module "ec2" {
   ImageId              = var.ImageId 
   region               = var.region
   vpc_id               = var.vpc_id
+  #public-ec2-sg        = [var.public-ec2-sg.id]
 }
 
 module "s3" {

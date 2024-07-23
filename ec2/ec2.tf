@@ -15,9 +15,10 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "web-server" {
-  ami           = data.aws_ami.ubuntu.id
-  instance_type = "t2.micro"
+  ami                 = data.aws_ami.ubuntu.id
+  instance_type       = "t2.micro"
   subnet_id           = var.test_private_sub_0
+  #security_groups     = var.public-ec2-sg 
 
 
   tags = {

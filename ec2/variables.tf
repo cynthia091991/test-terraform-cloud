@@ -37,3 +37,10 @@ variable "AWS_ACCESS_KEY_ID" {
 variable "vpc_id" {
   default = ""
 }
+
+# variable "public-ec2-sg" {
+#     type = list(string)
+#     description = "sg to launch public ec2"
+#     default =[""]
+
+# }
