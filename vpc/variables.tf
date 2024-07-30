@@ -31,8 +31,6 @@ variable "test" {
 }
 
 
-
-
 locals {
   security_groups = {
     public-ec2-sg = {
@@ -55,3 +53,7 @@ locals {
  }  }
 }
 
+variable "pc_security_group_ids" {
+  type = list(string)
+  default = [ "" ]
+}

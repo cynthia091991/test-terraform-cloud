@@ -14,6 +14,7 @@ output "test_private_sub" {
 output "test_private_sub_0" {
   value = aws_subnet.private_sub[0].id # output just an id of the first subnet 
 }
-# output "public-ec2-sg" {
-#   value = aws_security_group.dreambig_sg["public-ec2-sg"].id
-# }
+
+output "vpc_security_group_ids" {
+  value = aws_security_group.dreambig_sg.name
+}
