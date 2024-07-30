@@ -9,14 +9,14 @@ module "vpc" {
 }
 
 module "ec2" {
-  source               = "../ec2"
-  instance_type        = var.instance_type 
-  instance_name        = "product-search-instance"
-  test_private_sub_0   = module.vpc.test_private_sub_0
-  ImageId              = var.ImageId 
-  region               = var.region
-  vpc_id               = var.vpc_id
-  #public-ec2-sg        = [var.public-ec2-sg.id]
+  source                  = "../ec2"
+  instance_type           = var.instance_type 
+  instance_name           = "product-search-instance"
+  test_private_sub_0      = module.vpc.test_private_sub_0
+  ami                     = var.ami  
+  region                  = var.region
+  vpc_id                  = var.vpc_id
+  vpc_security_group_ids  = ["sg-088c206a3d24812b2"]           
 }
 
 module "s3" {

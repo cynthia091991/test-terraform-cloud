@@ -21,8 +21,8 @@ variable "region" {
   default = ["us-east-1"]
 }
 
-variable "ImageId" {
-  default = "ami-0a1debd1f3f6d1514" 
+variable "ami" {
+  default = "ami-04a81a99f5ec58529"
 }
 variable "test_private_sub_0" {
     type         = string 
@@ -30,9 +30,9 @@ variable "test_private_sub_0" {
     default      = ""
 }
 
-# variable "public-ec2-sg" {
-#     type = list(string)
-#     description = "sg to launch public ec2"
-#     default = ["public-ec2-sg"]
+# variable "vpc_security_group_ids" {
+#     type         = list(string)
+#     description  = "sg to launch public ec2"
+#     default      = [public_sg]
 
 # }
