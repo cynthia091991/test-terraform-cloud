@@ -22,7 +22,9 @@ variable "region" {
 }
 
 variable "ami" {
+
   default = "ami-04a81a99f5ec58529"
+
 }
 variable "test_private_sub_0" {
     type         = string 

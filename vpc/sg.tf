@@ -1,11 +1,10 @@
 resource "aws_security_group" "dreambig_sg" {
-  for_each    = local.security_groups   
-  name        = each.value.name
-  description = each.value.description
+  name        = local.security_groups["public-ec2-sg"].name 
+  description = local.security_groups["public-ec2-sg"].description
   vpc_id      = aws_vpc.dreambig_vpc.id
 
   dynamic "ingress" {
-    for_each = each.value.ingress
+    for_each = local.security_groups["public-ec2-sg"].ingress
     #iterator = port
     content {
       from_port   = ingress.value.from

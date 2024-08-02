@@ -1,4 +1,4 @@
-variable "ImageId" {
+variable "ami" {
     type = string
     description = "ami id"
     default = "" 
@@ -38,9 +38,9 @@ variable "vpc_id" {
   default = ""
 }
 
-# variable "public-ec2-sg" {
-#     type = list(string)
-#     description = "sg to launch public ec2"
-#     default =[""]
+variable "vpc_security_group_ids" {
+    type = list(string)
+    description = "sg to launch public ec2"
+    default = [""]
 
-# }
+}
