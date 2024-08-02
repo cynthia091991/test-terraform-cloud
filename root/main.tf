@@ -17,7 +17,7 @@ module "ec2" {
   ami                     = var.ami  
   region                  = var.region
   vpc_id                  = var.vpc_id
-  vpc_security_group_ids  = ["sg-088c206a3d24812b2"]           
+  vpc_security_group_ids  = ["01d594012bfdfa1ba"]           
 
   
 }
