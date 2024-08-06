@@ -1,5 +1,5 @@
 provider "aws" {
-  region     = "us-east-1"         # Change this to your desired region
+  region     = "eu-south-1"         # Change this to your desired region
   access_key = var.AWS_ACCESS_KEY_ID
   secret_key = var.AWS_SECRET_ACCESS_KEY
 }
@@ -17,7 +17,7 @@ module "ec2" {
   ami                     = var.ami  
   region                  = var.region
   vpc_id                  = var.vpc_id
-  vpc_security_group_ids  = ["sg-0f31c920393cf1545"]           
+  vpc_security_group_ids  = ["sg-0c2cbf7cd21ab35cd"]           
 
   
 }
