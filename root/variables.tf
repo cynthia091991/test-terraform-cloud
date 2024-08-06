@@ -13,7 +13,7 @@ variable "vpc_id" {
 }
 
 variable "instance_type" {
-    default = "t2.micro" 
+    default = "t3.micro" 
   
 }
 
@@ -22,15 +22,14 @@ variable "region" {
 }
 
 variable "ami" {
+  default =    "ami-082c90108dda3797e"       #"ami-04a81a99f5ec58529"
 
-  default = "ami-04a81a99f5ec58529"
-
-}
-variable "test_private_sub_0" {
-    type         = string 
-    description  = "subnet id to be launching the ec2"
-    default      = ""
-}
+ }
+# variable "test_private_sub_0" {
+#     type         = string 
+#     description  = "subnet id to be launching the ec2"
+#     default      = "aws_subnet.private_sub"
+# }
 
 # variable "vpc_security_group_ids" {
 #     type         = list(string)
