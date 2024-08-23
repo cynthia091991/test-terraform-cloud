@@ -1,14 +1,19 @@
 resource "aws_instance" "web_server" {
   ami                     = var.ami 
   instance_type           = "t3.micro"
-  key_name                = "jenkinsky"
   subnet_id               = var.test_private_sub_0
-  vpc_security_group_ids  = var.vpc_security_group_ids
+  security_groups         = var.sg-ids
 
   tags = {
-    Name = "dreambigserver"
+    Name = "${var.instance_name}-${format("%03d", 1)}"
+    env   = "${upper("prod")}-${upper(var.instance_name)}-${format("%03d", 1)}"
   }
+lifecycle {
+    create_before_destroy = true
+  }
+
 }
+
 
 
 
