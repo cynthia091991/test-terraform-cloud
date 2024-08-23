@@ -25,7 +25,7 @@ variable "ami" {
   default =    "ami-082c90108dda3797e"       #"ami-04a81a99f5ec58529"
 
  }
-# variable "test_private_sub_0" {
+#variable "test_private_sub_0" {
 #     type         = string 
 #     description  = "subnet id to be launching the ec2"
 #     default      = "aws_subnet.private_sub"

@@ -13,7 +13,7 @@ variable "instance_type" {
 variable "instance_name" {
     type = string
     description = "ec2 name"
-    default = "terrraform-cloud-testing"
+    default = ""
 }
 
 variable "test_private_sub_0" {
@@ -38,7 +38,7 @@ variable "vpc_id" {
   default = ""
 }
 
-variable "vpc_security_group_ids" {
+variable "sg-ids" {
     type = list(string)
     description = "sg to launch public ec2"
     default = [""]

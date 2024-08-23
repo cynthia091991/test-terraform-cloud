@@ -12,12 +12,12 @@ module "ec2" {
 
   source                  = "../ec2"
   instance_type           = var.instance_type 
-  instance_name           = "product-search-instance"
+  instance_name           = "${upper("dreambig-web")}"
   test_private_sub_0      = module.vpc.test_private_sub_0
   ami                     = var.ami  
   region                  = var.region
   vpc_id                  = var.vpc_id
-  vpc_security_group_ids  = ["sg-0c2cbf7cd21ab35cd"]           
+  sg-ids                  = [module.vpc.sg-ids]                   
 
   
 }
