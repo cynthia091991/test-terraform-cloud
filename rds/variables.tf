@@ -1,7 +1,7 @@
 variable "availability_zones" {
     type                   = list(string)
     description            = "az to deploy the db"
-   default                 = ["eu-south-1a", "eu-south-1b", "eu-south-1c"]
+   default                 = ["eu-south-1a", "eu-south-1b"]
 }
 
 variable "cluster_identifier" {
@@ -27,5 +27,17 @@ variable "database_names" {
 variable "master_username" {
   type              = string
   description       = "the name of database user for security purpose"
-  default           = "value"
+  default           = "auroral_user"
+}
+
+variable "engine_version" {
+  type                = string
+  description         = "the version for auroral engine to deploy this database"
+  default             = "8.0.mysql_aurora.3.05.2"
+}
+
+variable "master_password" {
+  type = string
+  default = "myauroral12345"
+  
 }
