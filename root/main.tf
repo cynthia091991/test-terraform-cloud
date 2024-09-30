@@ -6,6 +6,8 @@ provider "aws" {
 
 module "vpc" {
   source = "../vpc"
+  instance_id = module.ec2.instance_id
+
 }
 
 module "ec2" {
@@ -18,12 +20,18 @@ module "ec2" {
   region                  = var.region
   vpc_id                  = var.vpc_id
   sg-ids                  = [module.vpc.sg-ids]                   
-
-  
 }
 
-module "s3" {
-  source      = "../s3"
-  bucket_name = "dreambig-images-039483" 
-}
+# module "rds" {
+#   source = "../rds"
+#   db-subnet-group = module.vpc.db-subnet-group
+#   username        = "root"  
+#   password        = "admin12345"
+#   kms_secrets     = var.kms_secrets    
+#  }
+
+# module "s3" {
+#   source      = "../s3"
+#   bucket_name = "dreambig-images-039483" 
+# }
 
