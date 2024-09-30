@@ -31,3 +31,12 @@ resource "aws_subnet" "private_sub" {
   }
 }
 
+resource "aws_db_subnet_group" "default" {
+  name       = "dbsub-group-local.common_tags"
+  subnet_ids = aws_subnet.private_sub[*].id
+
+  tags = local.common_tags
+    
+}
+
+

@@ -18,3 +18,19 @@ output "test_private_sub_0" {
 output "sg-ids" {
   value = aws_security_group.dreambig_sg.id
 }
+
+output "test_public_sub" {
+  value = var.test["public_sub"]
+
+  }
+
+  output "db-subnet-group" {
+    value = aws_db_subnet_group.default.id
+    
+  }
+
+  output "eip_dns" {
+    value = aws_eip.bar.public_dns
+  }
+
+  

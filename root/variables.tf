@@ -14,17 +14,32 @@ variable "vpc_id" {
 
 variable "instance_type" {
     default = "t3.micro" 
-  
 }
 
 variable "region" {
   default = ["us-east-1"]
+ }
+
+ variable "ami" {
+    type = string
+    description = "ami id"
+    default = "" 
 }
 
-variable "ami" {
-  default =    "ami-082c90108dda3797e"       #"ami-04a81a99f5ec58529"
+# variable "ami" {
+#   default =    "ami-082c90108dda3797e"       #"ami-04a81a99f5ec58529"
+# }
 
- }
+# variable "kms_secrets" {
+#   type           = string
+#   default        = "aws_kms_secrets.creds.id"
+# }
+
+# variable "db_creds" {
+#   type             = object
+#   default          = ""
+# }
+
 #variable "test_private_sub_0" {
 #     type         = string 
 #     description  = "subnet id to be launching the ec2"
