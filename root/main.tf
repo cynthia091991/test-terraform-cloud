@@ -9,7 +9,7 @@ version = "~> 5.0"
 }
 provider "aws" {
   region     = "eu-south-1"         # Change this to your desired region
-  default    = profile
+  #default    = profile
 }
 
 module "vpc" {
