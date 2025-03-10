@@ -30,6 +30,10 @@ variable "test" {
   }
 }
 
+variable "db_subnet_group_name" {
+  type        = string
+  default     = "dreambig-test-db"
+}
 
 locals {
   security_groups = {
@@ -56,4 +60,38 @@ locals {
 variable "pc_security_group_ids" {
   type = list(string)
   default = [ "" ]
+}
+
+variable "sub_db_gr" {
+  type        = map(string)
+  default     = {
+  Environment = "dev"
+  Team        = "backend"
+  }
+}
+
+# variable "web_subnet" {
+#   type = string
+  
+# }
+
+# variable "app_subnet" {
+#   type = string
+  
+# }
+# variable "db_subnet" {
+#   type = string
+  
+# }
+
+
+# variable "create_load_balancer" {
+#   type      = bool
+#   default   = true
+  
+# }
+
+variable "instance_id" {
+  type = string
+  description = "instance id for eip"
 }
